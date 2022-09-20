@@ -73,14 +73,14 @@
 	return Vector2.new(UserInputService:GetMouseLocation().X + 1, UserInputService:GetMouseLocation().Y - 35)
   end
 
-  if not isfolder("PPHUD") then
-    makefolder("PPHUD")
+  if not isfolder("cathook") then
+    makefolder("cathook")
 
     local Arrow = request({Url = "https://raw.githubusercontent.com/Rain-Design/PPHUD/main/Dropdown.png", Method = "GET"})
-    writefile("PPHUD/Arrow.png", Arrow.Body)
+    writefile("cathook/Arrow.png", Arrow.Body)
 
     local Resize = request({Url = "https://raw.githubusercontent.com/Rain-Design/PPHUD/main/resize.png", Method = "GET"})
-    writefile("PPHUD/Resize.png", Resize.Body)
+    writefile("cathook/Resize.png", Resize.Body)
   end
   --//
   
