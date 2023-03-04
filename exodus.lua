@@ -3849,6 +3849,7 @@ function library:Playerlist(max_players)
         if not player_data[plr].image then
             current_player = plr
             player_data[plr].name = plr.Name
+            player_data[plr].dname = plr.DisplayName
 
             spawn(function()
                 local thumbnail_data = services.HttpService:JSONDecode(syn.request{Url = ("https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=%s&size=60x60&format=Png"):format(plr.UserId), Method = "GET"}.Body)
@@ -3884,7 +3885,7 @@ function library:Playerlist(max_players)
             })
 
             local bounds = bar:Create("Text", {
-                Text = plr.Name,
+                Text = plr.Name..plr.DisplayName,
                 Font = library.font,
                 Size = library.font_size,
                 Center = false,
@@ -3893,7 +3894,7 @@ function library:Playerlist(max_players)
                 ZIndex = 28
             }).TextBounds.X
 
-            player_data[plr] = {tags = {}, tag_size = bounds + 32, name = plr.Name, bar = bar}
+            player_data[plr] = {tags = {}, tag_size = bounds + 32, name = plr.Name, dame = plr.DisplayName bar = bar}
 
             -- parent after cuz my extension is goofy like that
             bar.Parent = holder
