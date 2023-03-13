@@ -2803,10 +2803,9 @@ function library:Load(options)
     end
 
     local cursor = utility.create("Triangle", {
-        Thickness = 2,
-        Filled = true,
+        Thickness = 6,
         Color = Color3.fromRGB(255, 255, 255),
-        ZIndex = 65
+        ZIndex = 1000
     })
 
     self.cursor = cursor
@@ -2816,9 +2815,9 @@ function library:Load(options)
     utility.connect(services.RunService.RenderStepped, function()
         if self.open then
             local mousepos = services.InputService:GetMouseLocation()
-            cursor.PointA = mousepos
-            cursor.PointB = mousepos + Vector2.new(6, 12)
-            cursor.PointC = mousepos + Vector2.new(6, 12)
+                cursor.PointA = Vector2.new(mouseLocation.X, mouseLocation.Y)
+                cursor.PointB = Vector2.new(mouseLocation.X + 16, mouseLocation.Y + 6)
+                cursor.PointC = Vector2.new(mouseLocation.X + 6, mouseLocation.Y + 16)
         end
     end)
 
