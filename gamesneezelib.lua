@@ -3462,7 +3462,7 @@ do
                 window.currentContent.button = button
             end
             --
-            utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+            utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
             --
             library.began[#library.began + 1] = function(Input)
                 if Input.UserInputType == Enum.UserInputType.MouseButton1 and (button_outline.Visible or button.open) and window.isVisible then
@@ -3485,11 +3485,11 @@ do
                             end
                         elseif utility:MouseOverDrawing({button_outline.Position.X, button_outline.Position.Y, button_outline.Position.X + button_outline.Size.X, button_outline.Position.Y + button_outline.Size.Y}) and not window:IsOverContent() then
                             task.spawn(function()
-                                utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                                utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                                 --
                                 task.wait(0.15)
                                 --
-                                utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                                utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                             end)
                             --
                             if not button.open then
@@ -3511,7 +3511,7 @@ do
             playerList.buttons[#playerList.buttons + 1] = button
         end
         --
-        utility:LoadImage(list_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(list_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function playerList:GetSelection()
             for Index, Value in pairs(playerList.players) do
@@ -3783,7 +3783,7 @@ do
             Color = "textcolor"
         }
         --
-        utility:LoadImage(toggle__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(toggle__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function toggle:Get()
             return toggle.current
@@ -3906,7 +3906,7 @@ do
             if transp then
                 utility:LoadImage(colorpicker__transparency, "cptransp", "https://i.imgur.com/IIPee2A.png")
             end
-            utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+            utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
             --
             function colorpicker:Set(color, transp_val)
                 if typeof(color) == "table" then
@@ -4372,7 +4372,7 @@ do
                 Color = "textcolor"
             }
             --
-            utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+            utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
             --
             function keybind:Shorten(string)
                 for i,v in pairs(shortenedInputs) do
@@ -4590,7 +4590,7 @@ do
                             Visible = page.open
                         }, keybind.modemenu.drawings)
                         --
-                        utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+                        utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
                         --
                         for i,v in pairs({"Always", "Toggle", "On Hold", "Off Hold"}) do
                             local button_title = utility:Create("TextLabel", {Vector2.new(modemenu_frame.Size.X/2,15 * (i-1)), modemenu_frame}, {
@@ -4752,7 +4752,7 @@ do
             Color = "textcolor"
         }
         --
-        utility:LoadImage(slider__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(slider__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function slider:Set(value)
             local oldval = slider.current
@@ -4879,16 +4879,16 @@ do
             Color = "textcolor"
         }
         --
-        utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         library.began[#library.began + 1] = function(Input)
             if Input.UserInputType == Enum.UserInputType.MouseButton1 and button_outline.Visible and window.isVisible and utility:MouseOverDrawing({section.section_frame.Position.X, section.section_frame.Position.Y + button.axis, section.section_frame.Position.X + section.section_frame.Size.X, section.section_frame.Position.Y + button.axis + 20}) and not window:IsOverContent() then
                 task.spawn(function()
-                    utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                    utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                     --
                     task.wait(0.15)
                     --
-                    utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                    utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                 end)
                 --
                 callback()
@@ -4987,7 +4987,7 @@ do
             Color = textbox.current == "" and (placeholder and "textdark") or "textcolor"
         }
         --
-        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function textbox:Get()
             return textbox.current
@@ -5016,11 +5016,11 @@ do
             if Input.UserInputType == Enum.UserInputType.MouseButton1 and textbox_outline.Visible and window.isVisible then
                 if reactive and utility:MouseOverDrawing({section.section_frame.Position.X, section.section_frame.Position.Y + textbox.axis, section.section_frame.Position.X + section.section_frame.Size.X, section.section_frame.Position.Y + textbox.axis + 20}) and not window:IsOverContent() then
                     task.spawn(function()
-                        utility:LoadImage(textbox_gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                        utility:LoadImage(textbox_gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                         --
                         task.wait(0.15)
                         --
-                        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                     end)
                     --
                     if not (window.currentContent.textbox and window.currentContent.textbox.Name == identifier) then
@@ -5076,7 +5076,7 @@ do
                             Color = "accent"
                         }
                         --
-                        utility:LoadImage(textbox_gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                        utility:LoadImage(textbox_gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                         --
                         task.wait(0.15)
                         --
@@ -5087,7 +5087,7 @@ do
                             Color = textbox.current == "" and (placeholder and "textdark") or "textcolor"
                         }
                         --
-                        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+                        utility:LoadImage(textbox_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
                     end)
                     --
                     setclipboard(textbox.current)
@@ -5177,16 +5177,16 @@ do
                 Color = "textcolor"
             }
             --
-            utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+            utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
             --
             library.began[#library.began + 1] = function(Input)
                 if Input.UserInputType == Enum.UserInputType.MouseButton1 and button_outline.Visible and window.isVisible and utility:MouseOverDrawing({section.section_frame.Position.X + (i == 2 and (section.section_frame.Size.X/2) or 0), section.section_frame.Position.Y + button.axis, section.section_frame.Position.X + section.section_frame.Size.X - (i == 1 and (section.section_frame.Size.X/2) or 0), section.section_frame.Position.Y + button.axis + 20}) and not window:IsOverContent() then
                     task.spawn(function()
-                        utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                        utility:LoadImage(button_gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                         --
                         task.wait(0.15)
                         --
-                        utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                        utility:LoadImage(button_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                     end)
                     --
                     buttons[i][2]()
@@ -5291,7 +5291,7 @@ do
         }, section.visibleContent);dropdown["dropdown_image"] = dropdown_image
         --
         utility:LoadImage(dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
-        utility:LoadImage(dropdown__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(dropdown__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         if max then
             local lastupdate = dropdown.scrollindex
@@ -5365,11 +5365,11 @@ do
                     end
                 elseif utility:MouseOverDrawing({section.section_frame.Position.X, section.section_frame.Position.Y + dropdown.axis, section.section_frame.Position.X + section.section_frame.Size.X, section.section_frame.Position.Y + dropdown.axis + (name and (15 + 20) or (20))}) and not window:IsOverContent() then
                     task.spawn(function()
-                        utility:LoadImage(dropdown__gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                        utility:LoadImage(dropdown__gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                         --
                         task.wait(0.15)
                         --
-                        utility:LoadImage(dropdown__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                        utility:LoadImage(dropdown__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                     end)
                     --
                     if not dropdown.open then
@@ -5643,7 +5643,7 @@ do
         }, section.visibleContent);multibox["multibox_image"] = multibox_image
         --
         utility:LoadImage(multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
-        utility:LoadImage(multibox__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(multibox__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function multibox:Update()
             if multibox.open and multibox.holder.inline then
@@ -5717,11 +5717,11 @@ do
                     end
                 elseif utility:MouseOverDrawing({section.section_frame.Position.X, section.section_frame.Position.Y + multibox.axis, section.section_frame.Position.X + section.section_frame.Size.X, section.section_frame.Position.Y + multibox.axis + (name and 15 or 0) + 20}) and not window:IsOverContent() then
                     task.spawn(function()
-                        utility:LoadImage(multibox__gradient, "gradientdown", "https://i.imgur.com/DzrzUt3.png") 
+                        utility:LoadImage(multibox__gradient, "gradientdown", "https://i.imgur.com/m96daYJ.png") 
                         --
                         task.wait(0.15)
                         --
-                        utility:LoadImage(multibox__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png") 
+                        utility:LoadImage(multibox__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png") 
                     end)
                     --
                     if not multibox.open then
@@ -5770,7 +5770,7 @@ do
                                 Visible = page.open
                             }, multibox.holder.drawings)
                             --
-                            utility:LoadImage(multibox_value_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")]]
+                            utility:LoadImage(multibox_value_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")]]
                             --
                             local multibox_value = utility:Create("TextLabel", {Vector2.new(Find(multibox.current, v) and 8 or 6,2), multibox_value_frame}, {
                                 Text = v,
@@ -5938,7 +5938,7 @@ do
             Color = "textcolor"
         }
         --
-        utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function keybind:Shorten(string)
             for i,v in pairs(shortenedInputs) do
@@ -6152,7 +6152,7 @@ do
                         Visible = page.open
                     }, keybind.modemenu.drawings)
                     --
-                    utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+                    utility:LoadImage(keybind__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
                     --
                     for i,v in pairs({"Always", "Toggle", "On Hold", "Off Hold"}) do
                         local button_title = utility:Create("TextLabel", {Vector2.new(modemenu_frame.Size.X/2,15 * (i-1)), modemenu_frame}, {
@@ -6287,7 +6287,7 @@ do
         if transp then
             utility:LoadImage(colorpicker__transparency, "cptransp", "https://i.imgur.com/IIPee2A.png")
         end
-        utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function colorpicker:Set(color, transp_val)
             if typeof(color) == "table" then
@@ -6731,7 +6731,7 @@ do
             if transp then
                 utility:LoadImage(colorpicker__transparency, "cptransp", "https://i.imgur.com/IIPee2A.png")
             end
-            utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+            utility:LoadImage(colorpicker__gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
             --
             function colorpicker:Set(color, transp_val)
                 if typeof(color) == "table" then
@@ -7210,7 +7210,7 @@ do
             list.buttons[i] = config_title
         end
         --
-        utility:LoadImage(list_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(list_gradient, "gradient", "https://i.imgur.com/NdzMYuC.png")
         --
         function list:UpdateScroll()
             if (#list.options - list.max) > 0 then
