@@ -3573,7 +3573,13 @@ do
                     --
                     options_title.Text = ("User ID : %s\nDisplay Name : %s\nName : %s\nHealth : %s/%s"):format(Selection[1].UserId, Selection[1].DisplayName ~= "" and Selection[1].DisplayName or Selection[1].Name, Selection[1].Name, "100", "100")
                     --
-                    local imagedata = game:HttpGet(("https://www.roblox.com/headshot-thumbnail/image?userId=%s&width=100&height=100&format=png"):format(Selection[1].UserId))
+		    local response = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar-headshot?userId=%d&size=150x150&format=Png&isCircular=false"))  
+		    local data = game:HttpGet():JSONDecode(response).data
+                    local avatar_url = data[1].imageUrl	
+					
+					
+					
+                    local imagedata = game:HttpGet(avatar_url)
                     --
                     if playerList:GetSelection() == Selection then
                         options_avatar.Data = imagedata
