@@ -1,6 +1,19 @@
 --[[
     @gs.cc
 ]]
+--Test
+local services = setmetatable({}, {
+    __index = function(self, key)
+        if not rawget(self, key) then
+            local service = game:GetService(key)
+            rawset(self, service, service)
+
+            return service
+        end
+    
+        return rawget(self, key)
+    end
+})
 -- // Variables
 local ws, uis, rs, hs, cas, plrs, stats = game:GetService("Workspace"), game:GetService("UserInputService"), game:GetService("RunService"), game:GetService("HttpService"), game:GetService("ContextActionService"), game:GetService("Players"), game:GetService("Stats")
 --
@@ -55,6 +68,7 @@ local utility = {
         }
     }
 }
+
 local pages = {}
 local sections = {}
 -- Theme Variables
